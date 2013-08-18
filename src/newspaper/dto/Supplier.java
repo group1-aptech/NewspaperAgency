@@ -53,13 +53,11 @@ public class Supplier {
     
     /**
      * Create values for new instance
-     * @param _id Supplier ID
      * @param _name Supplier name
      * @param _address Supplier address
      * @param _phoneNo Supplier Phone number
      */
-    public Supplier(int _id, String _name, String _address, String _phoneNo) {
-        this.id = _id;
+    public Supplier(String _name, String _address, String _phoneNo) {
         this.name = _name;
         this.address = _address;
         this.phoneNo = _phoneNo;
