@@ -45,7 +45,7 @@ public class RateOfNewspaper {
      */
     public RateOfNewspaper() {
         id = 0;
-        dayOfWeek = MyConstant.DayOfWeek.SUN.getValue();
+        dayOfWeek = MyConstant.DAY_OF_WEEK_ENUM.SUN.getValue();
         productID = 0;
         rate = 0;
     }
