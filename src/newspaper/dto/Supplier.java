@@ -17,10 +17,6 @@ public class Supplier {
         this.address = _address;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
     }

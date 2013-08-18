@@ -18,10 +18,6 @@ public class Inward {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public Date getInwardDate() {
         return inwardDate;
     }

@@ -5,5 +5,8 @@ package newspaper.dto;
  * @author Nguyen Hoang Anh
  */
 public class Requirement {
+    private int id;
+    private int customerId;
+    private int productId;
     
 }

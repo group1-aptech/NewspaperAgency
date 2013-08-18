@@ -6,4 +6,5 @@ package newspaper.dto;
  */
 public class BillDetails {
     
+    
 }

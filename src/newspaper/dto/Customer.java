@@ -58,10 +58,6 @@ public class Customer {
         this.deliveryCharge = _deliveryCharge;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
     }
