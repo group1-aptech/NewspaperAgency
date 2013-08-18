@@ -38,6 +38,11 @@ public class User {
         passWord = "";
     }
 
+    /**
+     * Create values for new instance
+     * @param userName
+     * @param passWord 
+     */
     public User(String userName, String passWord) {
         this.userName = userName;
         this.passWord = passWord;
