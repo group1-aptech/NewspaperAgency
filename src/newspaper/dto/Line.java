@@ -46,6 +46,10 @@ public class Line {
      * Create default values for new instance
      */
     public Line() {
+        id = 0;
+        name = "";
+        address = "";
+        phoneNo = "";
     }
 
     /**
@@ -56,8 +60,7 @@ public class Line {
      * @param address Address of delivery boy
      * @param phoneNo Phone number of of delivery boy
      */
-    public Line(int id, String name, String address, String phoneNo) {
-        this.id = id;
+    public Line(String name, String address, String phoneNo) {
         this.name = name;
         this.address = address;
         this.phoneNo = phoneNo;
