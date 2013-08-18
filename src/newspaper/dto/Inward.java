@@ -62,9 +62,26 @@ public class Inward {
         this.supplierID = supplierID;
     }
 
+    /**
+     * Create default values for new instance
+     */
     public Inward() {
+        id = 0;
+        inwardDate = new Date();
+        supplierID = 0;
+        productID = 0;
+        inwardQuantity = 0;
+        returned = 0;
     }
 
+    /**
+     * Create values for new instance
+     * @param inwardDate Inward date
+     * @param supplierID Supplier ID
+     * @param productID Product ID
+     * @param inwardQuantity Inward quantity
+     * @param returned Number of returned products
+     */
     public Inward(Date inwardDate, int supplierID, int productID, int inwardQuantity, int returned) {
         this.inwardDate = inwardDate;
         this.supplierID = supplierID;
