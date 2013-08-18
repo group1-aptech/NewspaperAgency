@@ -22,6 +22,20 @@ public class PaymentReceiver {
     public void setName(String name) {
         this.name = name;
     }
-    
-    
+
+    /**
+     * Create default values for new instance
+     */
+    public PaymentReceiver() {
+        id = 0;
+        name = "";
+    }
+
+    /**
+     * Create values for new instance
+     * @param name Name of receiver
+     */
+    public PaymentReceiver(String name) {
+        this.name = name;
+    }
 }
