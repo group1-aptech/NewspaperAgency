@@ -102,18 +102,30 @@ public class Customer {
      * Create default values for new instance
      */
     public Customer() {
+        id = 0;
+        name = "";
+        deliveryAddress = "";
+        phoneNo = "";
+        deliveryCharge = 0;
+        startDate = new Date();
+        closeDate = new Date();
+        lineId = 0;
+        active = false;
+        customerAvailableDay = "";
     }
 
     /**
      * Create values for new instance
      * @param name Customer Name
-     * @param deliveryAddress Customer Delivery Address
+     * @param deliveryAddress Customer's Delivery Address
      * @param phoneNo Customer phone number
      * @param deliveryCharge Delivery Charge
-     * @param startDate
-     * @param closeDate
-     * @param active
-     * @param lineId
+     * @param startDate Date when customer start requires newspaper
+     * @param closeDate Date when customer stop requires newspaper
+     * @param active flag for customer active, 
+     *               if customer is not available for some days in a month, 
+     *               just set customer this flag, no paper will deliver for this customer for the period.
+     * @param lineId Id of line
      * @param customerAvailableDay 
      */
     public Customer(String name, String deliveryAddress, String phoneNo, float deliveryCharge,
