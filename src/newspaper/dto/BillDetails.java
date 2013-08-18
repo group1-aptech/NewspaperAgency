@@ -5,6 +5,5 @@ package newspaper.dto;
  * @author Nguyen Hoang Anh
  */
 public class BillDetails {
-    
-    
+        
 }

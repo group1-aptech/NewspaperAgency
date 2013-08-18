@@ -5,5 +5,4 @@ package newspaper.dto;
  */
 public class BalanceDetails {
     
-    
 }
