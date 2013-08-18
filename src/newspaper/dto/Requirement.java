@@ -37,4 +37,26 @@ public class Requirement {
     public void setProductId(int productId) {
         this.productId = productId;
     }
+
+    /**
+     * Create default values for new instance
+     */
+    public Requirement() {
+        id = 0;
+        customerId = 0;
+        productId = 0;
+        newsPaperDays = new NewsPaperDay[7];
+    }
+
+    /**
+     * Create values for new instance
+     * @param customerId
+     * @param productId
+     * @param newsPaperDays 
+     */
+    public Requirement(int customerId, int productId, NewsPaperDay[] newsPaperDays) {
+        this.customerId = customerId;
+        this.productId = productId;
+        this.newsPaperDays = newsPaperDays;
+    }
 }
