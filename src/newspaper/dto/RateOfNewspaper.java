@@ -10,6 +10,28 @@ public class RateOfNewspaper {
     private int dayOfWeek;
     private double rate;
 
+    /**
+     * Day of week
+     */
+    public static enum DayOfWeek{
+        
+        SUN(1), MON(2), TUE(3), WED(4), THU(5), FRI(6), SAT(7);
+        
+        private int value;
+
+        /**
+         * Get value of a day of week
+         * @return value from 1 - 8
+         */
+        public int getValue() {
+            return value;
+        }
+        
+        private DayOfWeek(int d){
+            value = d;
+        }
+    } 
+    
     public int getDayOfWeek() {
         return dayOfWeek;
     }
@@ -47,7 +69,20 @@ public class RateOfNewspaper {
      */
     public RateOfNewspaper() {
         id = 0;
+        dayOfWeek = DayOfWeek.SUN.getValue();
         productID = 0;
         rate = 0;
+    }
+
+    /**
+     * Create values for new instance
+     * @param productID
+     * @param dayOfWeek 
+     * @param rate Rate of product which has productID
+     */
+    public RateOfNewspaper(int productID, int dayOfWeek, double rate) {
+        this.productID = productID;
+        this.dayOfWeek = dayOfWeek;
+        this.rate = rate;
     }
 }
