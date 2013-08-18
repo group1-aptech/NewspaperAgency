@@ -31,11 +31,7 @@ public class Product {
      * Type of Product: Magazine
      */
     public static final int MZ = 2;
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    
     public int getId() {
         return id;
     }
