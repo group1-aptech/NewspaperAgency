@@ -1,5 +1,6 @@
 package newspaper.dto;
 
+
 /**
  * @since Aug - 17 - 2013
  * @author Nguyen Hoang Anh
@@ -7,22 +8,13 @@ package newspaper.dto;
 public class Product {
     
     private int id;
+    private String code;
     private String name;
-    private String language;
     private int supplierID;
     private int type;
-    private float rateOfMagazine;
-    // TODO: Fix?
-    private int rateOfNewspaperID;
+    private double rateOfMagazine;
+    private RateOfNewspaper[] rateOfNewspapers;
     
-    /**
-     * Language for product: English
-     */
-    public static final String EN = "English";
-    /**
-     * Language for product: Vietnamese
-     */
-    public static final String VI = "Vietnamese";
     /**
      * Type of Product: Newspaper
      */
@@ -36,12 +28,12 @@ public class Product {
         return id;
     }
 
-    public String getLanguage() {
-        return language;
+    public String getCode() {
+        return code;
     }
 
-    public void setLanguage(String language) {
-        this.language = language;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getName() {
@@ -68,48 +60,50 @@ public class Product {
         this.type = typeID;
     }
 
-    public float getRateOfMagaznie() {
+    public double getRateOfMagazine() {
         return rateOfMagazine;
     }
 
-    public void setRateOfMagaznie(float rateOfMagaznie) {
-        this.rateOfMagazine = rateOfMagaznie;
+    public void setRateOfMagazine(double rateOfMagazine) {
+        this.rateOfMagazine = rateOfMagazine;
+    }
+    
+    public RateOfNewspaper[] getRateOfNewspapers() {
+        return rateOfNewspapers;
     }
 
-    public int getRateOfNewspaperID() {
-        return rateOfNewspaperID;
+    public void setRateOfNewspapers(RateOfNewspaper[] rateOfNewspapers) {
+        this.rateOfNewspapers = rateOfNewspapers;
     }
-
-    public void setRateOfNewspaperID(int rateOfNewspaperID) {
-        this.rateOfNewspaperID = rateOfNewspaperID;
-    }
-
     
     /**
      * Create default values for new instance
      */
     public Product() {
         id = 0;
-        name = "Product";
-        language = Product.EN;
-        supplierID = 1;
+        code = "";
+        name = "";
+        supplierID = 0;
         type = Product.NP; // NP is newspaper, MZ is magazine
+        rateOfMagazine = 0.0;
+        rateOfNewspapers = new RateOfNewspaper[7];
     }
 
     /**
      * Create values for new instance
-     * @param id Product ID 
-     * @param name Product name
-     * @param language Language
+     * @param code Code of product
+     * @param name Name of product
      * @param supplierID Supplier ID
-     * @param type TypeID: MyConstant.NP is newspaper, MyConstant.MZ is magazine
+     * @param type Type of product: NP is newspaper, MZ is magazine
+     * @param rateOfMagazine If product is newspaper, rateOfNewspapers = 0
+     * @param rateOfNewspapers If product is magazine, rateOfMagazine is empty
      */
-    // TODO: id?
-    public Product(int id, String name, String language, int supplierID, int type) {
-        this.id = id;
+    public Product(String code, String name, int supplierID, int type, double rateOfMagazine, RateOfNewspaper[] rateOfNewspapers) {
+        this.code = code;
         this.name = name;
-        this.language = language;
         this.supplierID = supplierID;
         this.type = type;
+        this.rateOfMagazine = rateOfMagazine;
+        this.rateOfNewspapers = rateOfNewspapers;
     }
 }
