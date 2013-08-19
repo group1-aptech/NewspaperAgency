@@ -94,9 +94,20 @@
             <Property name="toolTipText" type="java.lang.String" value="Transaction"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="inwardByFormMnuItem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Daily Stock Inward by Form"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="inwardByGridMnuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Daily Stock Inward by Grid"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="supplierPaymentMnuItem">
+              <Properties>
+                <Property name="mnemonic" type="int" value="109"/>
+                <Property name="text" type="java.lang.String" value="Supplier Payment"/>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -146,7 +157,7 @@
     <Container class="javax.swing.JDesktopPane" name="jDesktopPane2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="f9" green="ea" red="db" type="rgb"/>
+          <Color blue="b4" green="b4" red="b4" type="rgb"/>
         </Property>
       </Properties>
 
