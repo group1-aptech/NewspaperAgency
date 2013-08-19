@@ -1,12 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package newspaper.gui;
 
+import java.awt.Toolkit;
+
 /**
- *
- * @author HKA
+ * @since Aug - 19 - 2013
+ * @author Nguyen Hoang Anh
  */
 public class FrmMain extends javax.swing.JFrame {
 
@@ -15,6 +13,20 @@ public class FrmMain extends javax.swing.JFrame {
      */
     public FrmMain() {
         initComponents();
+        settingLookAndFeel();    }
+    
+    
+    private void settingLookAndFeel() {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FrmMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -26,20 +38,87 @@ public class FrmMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane2 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMnuItem = new javax.swing.JMenu();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        logoutMnuItem = new javax.swing.JMenuItem();
         masterMnuItem = new javax.swing.JMenu();
+        productMnuItem = new javax.swing.JMenuItem();
+        supplierMnuItem = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        customerMnuItem = new javax.swing.JMenuItem();
+        lineMnuItem = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        receiverMnuItem = new javax.swing.JMenuItem();
+        transactionMenuItem = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Newspaper Agency System");
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icon.png")));
+
+        jDesktopPane2.setBackground(new java.awt.Color(219, 234, 249));
 
         fileMnuItem.setMnemonic('F');
         fileMnuItem.setText("File");
+        fileMnuItem.add(jSeparator4);
+
+        logoutMnuItem.setText("Logout");
+        fileMnuItem.add(logoutMnuItem);
+
         jMenuBar1.add(fileMnuItem);
 
         masterMnuItem.setMnemonic('M');
         masterMnuItem.setText("Master");
+
+        productMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        productMnuItem.setMnemonic('P');
+        productMnuItem.setText("Product");
+        productMnuItem.setToolTipText("Product master");
+        productMnuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productMnuItemActionPerformed(evt);
+            }
+        });
+        masterMnuItem.add(productMnuItem);
+
+        supplierMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        supplierMnuItem.setMnemonic('S');
+        supplierMnuItem.setText("Supplier");
+        supplierMnuItem.setToolTipText("Supplier master");
+        masterMnuItem.add(supplierMnuItem);
+        masterMnuItem.add(jSeparator1);
+
+        customerMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        customerMnuItem.setMnemonic('C');
+        customerMnuItem.setText("Customer");
+        customerMnuItem.setToolTipText("Customer master");
+        masterMnuItem.add(customerMnuItem);
+
+        lineMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        lineMnuItem.setMnemonic('L');
+        lineMnuItem.setText("Line");
+        lineMnuItem.setToolTipText("Line master");
+        masterMnuItem.add(lineMnuItem);
+        masterMnuItem.add(jSeparator2);
+
+        receiverMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        receiverMnuItem.setMnemonic('R');
+        receiverMnuItem.setText("Payment Receiver");
+        receiverMnuItem.setToolTipText("Payment Receiver Master");
+        masterMnuItem.add(receiverMnuItem);
+
         jMenuBar1.add(masterMnuItem);
+
+        transactionMenuItem.setMnemonic('T');
+        transactionMenuItem.setText("Transaction");
+        transactionMenuItem.setToolTipText("Transaction");
+
+        jMenuItem1.setText("Daily Stock Inward by Form");
+        transactionMenuItem.add(jMenuItem1);
+
+        jMenuBar1.add(transactionMenuItem);
 
         setJMenuBar(jMenuBar1);
 
@@ -47,48 +126,36 @@ public class FrmMain extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 798, Short.MAX_VALUE)
+            .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 798, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
+            .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, Short.MAX_VALUE)
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-814)/2, (screenSize.height-530)/2, 814, 530);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void productMnuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productMnuItemActionPerformed
+        
+    }//GEN-LAST:event_productMnuItemActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new FrmMain().setVisible(true);
-            }
-        });
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem customerMnuItem;
     private javax.swing.JMenu fileMnuItem;
+    private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JMenuItem lineMnuItem;
+    private javax.swing.JMenuItem logoutMnuItem;
     private javax.swing.JMenu masterMnuItem;
+    private javax.swing.JMenuItem productMnuItem;
+    private javax.swing.JMenuItem receiverMnuItem;
+    private javax.swing.JMenuItem supplierMnuItem;
+    private javax.swing.JMenu transactionMenuItem;
     // End of variables declaration//GEN-END:variables
 }
