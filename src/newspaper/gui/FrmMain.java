@@ -55,6 +55,11 @@ public class FrmMain extends javax.swing.JFrame {
         inwardByFormMnuItem = new javax.swing.JMenuItem();
         inwardByGridMnuItem = new javax.swing.JMenuItem();
         supplierPaymentMnuItem = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        requirementMnuItem = new javax.swing.JMenuItem();
+        transactionMnuItem = new javax.swing.JMenuItem();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Newspaper Agency System");
@@ -126,6 +131,25 @@ public class FrmMain extends javax.swing.JFrame {
         supplierPaymentMnuItem.setMnemonic('m');
         supplierPaymentMnuItem.setText("Supplier Payment");
         transactionMenuItem.add(supplierPaymentMnuItem);
+        transactionMenuItem.add(jSeparator3);
+
+        requirementMnuItem.setMnemonic('q');
+        requirementMnuItem.setText("Customer Requirement");
+        requirementMnuItem.setToolTipText("Customer Requirement");
+        transactionMenuItem.add(requirementMnuItem);
+
+        transactionMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        transactionMnuItem.setMnemonic('T');
+        transactionMnuItem.setText("Transaction");
+        transactionMnuItem.setToolTipText("Transaction");
+        transactionMenuItem.add(transactionMnuItem);
+        transactionMenuItem.add(jSeparator5);
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setMnemonic('D');
+        jMenuItem1.setText("Daily Activity Check");
+        jMenuItem1.setToolTipText("");
+        transactionMenuItem.add(jMenuItem1);
 
         jMenuBar1.add(transactionMenuItem);
 
@@ -157,16 +181,21 @@ public class FrmMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem inwardByGridMnuItem;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
+    private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JMenuItem lineMnuItem;
     private javax.swing.JMenuItem logoutMnuItem;
     private javax.swing.JMenu masterMnuItem;
     private javax.swing.JMenuItem productMnuItem;
     private javax.swing.JMenuItem receiverMnuItem;
+    private javax.swing.JMenuItem requirementMnuItem;
     private javax.swing.JMenuItem supplierMnuItem;
     private javax.swing.JMenuItem supplierPaymentMnuItem;
     private javax.swing.JMenu transactionMenuItem;
+    private javax.swing.JMenuItem transactionMnuItem;
     // End of variables declaration//GEN-END:variables
 }
