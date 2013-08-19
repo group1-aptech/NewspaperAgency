@@ -52,13 +52,15 @@ public class FrmMain extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
         receiverMnuItem = new javax.swing.JMenuItem();
         transactionMenuItem = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        inwardByFormMnuItem = new javax.swing.JMenuItem();
+        inwardByGridMnuItem = new javax.swing.JMenuItem();
+        supplierPaymentMnuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Newspaper Agency System");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icon.png")));
 
-        jDesktopPane2.setBackground(new java.awt.Color(219, 234, 249));
+        jDesktopPane2.setBackground(new java.awt.Color(180, 180, 180));
 
         fileMnuItem.setMnemonic('F');
         fileMnuItem.setText("File");
@@ -115,8 +117,15 @@ public class FrmMain extends javax.swing.JFrame {
         transactionMenuItem.setText("Transaction");
         transactionMenuItem.setToolTipText("Transaction");
 
-        jMenuItem1.setText("Daily Stock Inward by Form");
-        transactionMenuItem.add(jMenuItem1);
+        inwardByFormMnuItem.setText("Daily Stock Inward by Form");
+        transactionMenuItem.add(inwardByFormMnuItem);
+
+        inwardByGridMnuItem.setText("Daily Stock Inward by Grid");
+        transactionMenuItem.add(inwardByGridMnuItem);
+
+        supplierPaymentMnuItem.setMnemonic('m');
+        supplierPaymentMnuItem.setText("Supplier Payment");
+        transactionMenuItem.add(supplierPaymentMnuItem);
 
         jMenuBar1.add(transactionMenuItem);
 
@@ -133,8 +142,8 @@ public class FrmMain extends javax.swing.JFrame {
             .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, Short.MAX_VALUE)
         );
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-814)/2, (screenSize.height-530)/2, 814, 530);
+        setSize(new java.awt.Dimension(814, 530));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void productMnuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productMnuItemActionPerformed
@@ -144,9 +153,10 @@ public class FrmMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem customerMnuItem;
     private javax.swing.JMenu fileMnuItem;
+    private javax.swing.JMenuItem inwardByFormMnuItem;
+    private javax.swing.JMenuItem inwardByGridMnuItem;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator4;
@@ -156,6 +166,7 @@ public class FrmMain extends javax.swing.JFrame {
     private javax.swing.JMenuItem productMnuItem;
     private javax.swing.JMenuItem receiverMnuItem;
     private javax.swing.JMenuItem supplierMnuItem;
+    private javax.swing.JMenuItem supplierPaymentMnuItem;
     private javax.swing.JMenu transactionMenuItem;
     // End of variables declaration//GEN-END:variables
 }
